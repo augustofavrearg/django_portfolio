@@ -1,0 +1,30 @@
+{% extends 'layout.html'%}
+{%block content%}
+{% load static %}
+<h1> Posts
+</h1>
+
+{% for post in posts %}
+
+<div class="p-3"><div class="card card-body bg-black " >
+    <div class="row">
+        <div class="col-3">
+            <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid" style="object-fit: cover; width: 400px; height: 200px; ">
+        </div>
+    <div class="col-9">
+        <h2>{{post.title}}</h2>
+        <h3>{{post.fecha}}</h3>  
+       
+        <p>{{post.descripcion|truncatechars:100}}</p>
+    <!-- href va a ir a un url--> 
+    <a href="{% url 'blog:post_detail' post.id %}" class="btn btn-primary"> {{post.title}}</a>
+     
+    
+    </div>
+    
+    </div>
+     
+    </div></div>
+
+{%endfor%}
+{% endblock %}

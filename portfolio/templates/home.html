@@ -1,0 +1,65 @@
+{% extends 'layout.html'%}
+{%block content%}
+{% load static %}
+
+
+<!---->
+
+<header class="row  border border rounded-1 bg-blue border-dark" > 
+    <div class="col-md-4" > 
+        <img src="{% static 'portfolio/nuevo_logo.png'%}" alt="" class="img-fluid" > 
+    </div>
+
+    <div class="col-md-8 my-auto bg-blue"  >
+        <h1> <strong> FullStack Developer</strong> <i> </i></h1><br/> <br/><br/> 
+        
+        <h2> Bienvenidos a mi portfolio profesional.<br/> <br/>
+            En la home algunos de mis proyectos, cursos realizados y trabajos freelance.<br/><br/>
+            En el blog algunos de mis articulos sobre las cosas que aprendo en los trabajos freelance y cursos que realizo.<br/><br/><br/><br/>
+           <h2 style="color: #FFCF31;"> Python para Data Analysis, Data Science y Machine Learning, SQL y Bases de datos, Django, PHP, Git, HTML, CSS, entre otros.</h2><br/><br/>
+           
+            
+            
+           <br/>
+
+            </h2>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg btn-block"
+            href="{% static 'portfolio/CV Favre Augusto Ramón (3).pdf' %}" 
+            target="_blank">Descargar CV</button>
+            
+           <!--style="background-color: #331E6D; color: #FFCF31; transition-duration: 0.4s;"
+            --> 
+            
+    </div>
+
+</header>
+
+<div class="row my-4 text-center">
+
+<h3>Mis Proyectos</h3>
+<h5> Aca algunos de mis proyectos mas interesantes.</h5>
+
+    {% for project in projects%}
+
+<div class="col-md-4 h-100 ">
+    <div class="card bg-blue border  rounded-1 border-dark">
+        <div class="card-deck">
+    <h2>{{project.title}}</h2>
+    <p>{{project.description}}</p>
+   
+   
+     <img src="{{project.image.url}}" alt="{{project.title}}" class="img-thumbnail" style="object-fit: cover; width: 400px; height: 300px; ">
+   
+    <!--<img  src="{{project.image.url}}" alt="{{project.title}}" class="img-fluid" style=""/>-->
+   
+    {%if project.url %}
+    <a href="{{project.url}}">{{project.url}}</a>
+    {%endif%}
+        </div>
+    </div>
+</div>
+
+{%endfor%}
+{%endblock%}
+</div>

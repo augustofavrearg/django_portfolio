@@ -1,0 +1,31 @@
+
+body{
+    background-color:#331E6D;
+    background-image: linear-gradient(rgba(22, 3, 74, 0.78), rgba(22, 3, 74, 0.78)), url(https://i.pinimg.com/736x/34/9b/82/349b82d378019dae6befb4a1884957b3.jpg); 
+    
+}
+
+.bg-black{
+    
+    background:linear-gradient(rgba(19, 15, 15, 0.9), rgba(19, 15, 15, 0.9));
+    
+}
+.bg-color {
+    border-style: solid;
+    border-color: black;
+    background: linear-gradient(rgba(51, 30, 109, 0.1), rgba(51, 30, 109, 0.1));
+    
+
+  }
+.bg-blue{
+    background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    
+   
+}
+.object-fit{
+    object-fit: cover;
+}   
+footer{
+    background-color: #000000;
+    color: #000000;
+}

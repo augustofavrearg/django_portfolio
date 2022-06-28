@@ -1,0 +1,17 @@
+{% extends 'layout.html'%}
+
+{%block content%}
+{% load static %}
+
+<div class="text-center">
+    <h1>POST</h1>
+ <h2>{{post.title}}</h2>
+ <h3 class="my-2 h5 ">{{post.fecha| upper}}</h3>
+ 
+<img src="{{post.image.url}}" class="img-fluid" alt="{{post.title}}">
+
+</div>
+<div class="text-rigth ">
+    <p>{{post.descripcion}}</p></div>
+
+{% endblock %} 
